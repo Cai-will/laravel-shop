@@ -2,7 +2,7 @@
 
 @section('title', 'Product')
 
-@section('nav_product', 'active')
+@section('nav_products', 'active')
 
 @section('content')
 
