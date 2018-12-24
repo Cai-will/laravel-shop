@@ -18,7 +18,7 @@ php artisan key:generate
 [...]                
 DB_CONNECTION=mysql                    
 DB_HOST=localhost                
-DB_PORT=3306                    
+DB_PORT=33060                    
 DB_DATABASE=blog                    
 DB_USERNAME=root                    
 DB_PASSWORD=root                  
