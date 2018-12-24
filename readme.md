@@ -4,16 +4,16 @@
 
 <h3>clone並還原專案</h3>
 
-- 先切換到要放專案的資料夾，然後從終端機執行：
+- 先切換到要放專案的資料夾，然後從終端機執行：<br>
 git clone https://github.com/Cai-will/laravel-shop laravel-shop 
-- Copy下來後，進入laravel-shop 目錄，然後讓composer重建相關套件，此時會重建vendor目裡的內容
-cd laravel-shop
+- Copy下來後，進入laravel-shop 目錄，然後讓composer重建相關套件，此時會重建vendor目裡的內容<br>
+cd laravel-shop<br>
 composer install
-- 最後要還原.env設定檔，必須先把一個範例檔複製成.env，然後利用產生器來產生APP KEY，重點還有資料庫的名稱及帳號密碼設定一定要正確。
-cp .env.example .env
+- 最後要還原.env設定檔，必須先把一個範例檔複製成.env，然後利用產生器來產生APP KEY，重點還有資料庫的名稱及帳號密碼設定一定要正確。<br>
+cp .env.example .env <br>
 php artisan key:generate
-- 接下來打開.env文件，你會發現APP_KEY一行已經自動填入了我們剛剛生成的key。
-- 接下來我們將數據庫信息填入相應的位置：
+- 接下來打開.env文件，你會發現APP_KEY一行已經自動填入了我們剛剛生成的key。<br>
+接下來我們將數據庫信息填入相應的位置：
 
 [...]                
 DB_CONNECTION=mysql                    
@@ -23,22 +23,13 @@ DB_DATABASE=blog
 DB_USERNAME=root                    
 DB_PASSWORD=root                  
 [...]
-- 我們看到，DB_DATABASE一行，我們填入該環境下數據庫名稱，DB_USERNAME及DB_PASSWORD一行，我們分別填入管理該數據庫的用戶名和密碼。
+我們看到，DB_DATABASE一行，我們填入該環境下數據庫名稱，DB_USERNAME及DB_PASSWORD一行，我們分別填入管理該數據庫的用戶名和密碼。
 
-- 好了，現在我們保存文件。如果你有數據庫遷移文件（migration），那麼現在可以運行重建資料庫
-php artisan migrate
+- 好了，現在我們保存文件。如果你有數據庫遷移文件（migration），那麼現在可以運行重建資料庫<br>
+php artisan migrate<br>
 php artisan serve
 #####您現在可以在localhost：8000訪問您的項目:)
 
-- 創建一個名為homesteadutf8_general_ci的本地數據庫
-- 下載作曲家https://getcomposer.org/download/
-- 從git提供程序中拉Laravel / php項目。
-- 將.env.example文件重命名為.env項目根目錄並填充數據庫信息。（Windows不會讓你這樣做，所以你必須打開你的控制台cd你的項目根目錄並運行mv .env.example .env）
-- 打開控制台並cd你的項目根目錄
-- 跑composer install
-- 跑 php artisan key:generate
-- 跑 php artisan migrate
-- 跑 
 
 Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
 
